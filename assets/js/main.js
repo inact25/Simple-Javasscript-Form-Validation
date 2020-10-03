@@ -5,7 +5,9 @@ let condition = {
     gender:false,
     agreement:false
 }
-
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 function endUserAgreement() {
     Swal.fire({
         title: '<strong>End User Agreement</strong>',
@@ -41,8 +43,6 @@ function endUserAgreement() {
         focusConfirm: false,
     })
 }
-
-
 function nameHandler(e){
     if (e.target.value.length !== 0 ){
         condition.name = true
@@ -68,7 +68,6 @@ function emailHandler(e) {
         e.target.classList.remove("mailInValid")
     }
 }
-
 function phoneHandler(e) {
     const val = e.target.value
     const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
@@ -86,11 +85,28 @@ function phoneHandler(e) {
         e.target.classList.remove("phoneInValid")
     }
 }
-
 function genderHandler(e) {
    condition.gender = true
 }
-
 function agreementHandler(e){
         condition.agreement = !condition.agreement
+}
+const onSubmit =(e)=> {
+    if (condition.name && condition.agreement && condition.mail && condition.phone && condition.gender) {
+        e.target.classList.add("disabled")
+        delay(3000).then(() => {
+            e.target.classList.remove("disabled")
+            Swal.fire(
+                'Good job!',
+                'Data have been submited',
+                'success'
+            )
+        });
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Please check your input',
+        })
+    }
 }

@@ -99,6 +99,16 @@
     display: unset !important;
     color: #F50057;
 }
+.vlavalv-form-data button.disabled {
+    background: #650728;
+}
+.vlavalv-form-data button.disabled ~ .icons .fa-circle-o-notch {
+    display: inline-block !important;
+    transform: scale(1.7);
+    opacity: 1;
+    visibility: visible;
+    color: white;
+}
 
 @media only screen and (max-width: 795px) {
     .vlavalv-form-images img {
@@ -125,7 +135,6 @@
 .swal2-styled.swal2-confirm {
     background-color: #F50057 !important;
 }
-
 .icons {
     display: flex;
     position: absolute;

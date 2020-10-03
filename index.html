@@ -29,12 +29,14 @@
                         </div>
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input oninput="nameHandler(event)" type="text" class="form-control form-control-lg" id="name"
+                            <input oninput="nameHandler(event)" type="text" class="form-control form-control-lg"
+                                   id="name"
                                    placeholder="what is your name ?">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input oninput="emailHandler(event)" type="email" class="form-control form-control-lg" id="email"
+                            <input oninput="emailHandler(event)" type="email" class="form-control form-control-lg"
+                                   id="email"
                                    placeholder="yours@example.com">
                             <div class="icons">
                                 <i style="display: none" class="fa fa-check-circle"></i>
@@ -43,7 +45,8 @@
                         </div>
                         <div class="mb-3">
                             <label for="phone" class="form-label">Phone</label>
-                            <input oninput="phoneHandler(event)" type="text" class="form-control form-control-lg" id="phone"
+                            <input oninput="phoneHandler(event)" type="text" class="form-control form-control-lg"
+                                   id="phone"
                                    placeholder="phone number">
                             <div class="icons">
                                 <i style="display: none" class="fa fa-check-circle"></i>
@@ -56,7 +59,8 @@
                             </div>
                             <div class="col-4">
                                 <div class="form-check px-0">
-                                    <input class="gender" oninput="genderHandler(event)" type="radio" name="gender" id="male">
+                                    <input class="gender" oninput="genderHandler(event)" type="radio" name="gender"
+                                           id="male">
                                     <label class="form-check-label form-check-label-lg" for="male">
                                         Male
                                     </label>
@@ -64,7 +68,8 @@
                             </div>
                             <div class="col-4">
                                 <div class="form-check px-0">
-                                    <input oninput="nameHandler(event)" class="gender" type="radio" name="gender" id="female">
+                                    <input oninput="nameHandler(event)" class="gender" type="radio" name="gender"
+                                           id="female">
                                     <label class="form-check-label form-check-label-lg" for="female">
                                         Female
                                     </label>
@@ -80,16 +85,23 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-check mt-3 vlavalv-agrement">
-                                    <input oninput="agreementHandler(event)" class="form-check-input form-check-input-lg" type="checkbox" value=""
+                                    <input oninput="agreementHandler(event)"
+                                           class="form-check-input form-check-input-lg" type="checkbox" value=""
                                            id="flexCheckDefault">
                                     <p class="form-check-label">
-                                        I agree to the <a onclick="endUserAgreement()">end user agreement and services</a>
+                                        I agree to the <a onclick="endUserAgreement()">end user agreement and
+                                        services</a>
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="submit mt-3">
-                            <button class="btn btn-block btn-lg btn-primary rounded-pill">Submit</button>
+                            <button class="btn btn-block btn-lg btn-primary rounded-pill" onclick="onSubmit(event)">
+                                Submit
+                            </button>
+                            <div class="icons">
+                                <i style="display: none" class="fa fa-circle-o-notch fa-spin load"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
